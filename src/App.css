@@ -1,38 +1,91 @@
-.App {
+.home {
   text-align: center;
+  border: 3px solid #aaa;
+  padding: 0;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* Global Styles */
+:root {
+  --nav-primary-color: lightgreen;
+  --nav-text-color: Black;
+  --nav-a-hov-color: White;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+a {
+  color: var(--nav-primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: #666;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem 4rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 0;
+  background-color: #666;
+  color: #fff;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  color: var(--nav-text-color);
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+.navbar a:hover {
+  color: var(--nav-a-hov-color);
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  width: 100%;
+  border: 1px solid;
+}
+th {
+  background-color: #666;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  display: inline-block;
+  background-color: #666;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 1em;
+  padding: 20px;
+  width: fit-content;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0.1em;
 }
