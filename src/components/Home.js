@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { GetAllPosts } from '../services/GetAllPosts'
+import PostsList from  './PostsList'
+
 
 function Home() {
+    
+    const [posts, setPosts] = useState([])
+    useEffect(() => {
+        GetAllPosts()
+        
+       
+       
+    }, [])
+
     return (
-        <div>
-            <h2>home</h2>
+        <div className='home'>
+            <h1>Home</h1>
+
+            <div>
+               222 
+            </div>
+
+
+            <ul>
+        
+
+
+            </ul>
+
+            <PostsList myPosts={posts} />
+
+
+
         </div>
     )
 }
