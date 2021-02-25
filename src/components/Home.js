@@ -7,7 +7,12 @@ function Home() {
     
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        GetAllPosts()
+        GetAllPosts().then((res)=>{
+            setPosts(res)
+            console.log(posts)
+        }).catch((err)=>{
+            console.log(err)
+        })
         
        
        
@@ -18,7 +23,7 @@ function Home() {
             <h1>Home</h1>
 
             <div>
-               222 
+                
             </div>
 
 

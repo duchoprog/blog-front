@@ -89,3 +89,7 @@ button {
   cursor: pointer;
   margin: 0.1em;
 }
+.postcard {
+  background-color: grey;
+  margin-bottom: 0.2em;
+}

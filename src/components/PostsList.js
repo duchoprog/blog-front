@@ -6,15 +6,8 @@ function PostsList({myPosts}) {
     return (
         <>
           
-            <table className="table">
-                <tbody>
-                    <tr id="tableHeaders">
-                        
-                        <th>Title</th>
-                        <th>Details</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
+            <div className="div">
+                
 
                     {myPosts.map(post => (
 
@@ -27,13 +20,13 @@ function PostsList({myPosts}) {
 
                     ))}
 
-                    {
+            {/*         {
                 myPosts.map((post)=>{
                     return <li key={post.id}>{post.title}</li>
                 })
-            }
-                </tbody>
-            </table>
+            } */}
+                
+            </div>
         </>
     )
 }
