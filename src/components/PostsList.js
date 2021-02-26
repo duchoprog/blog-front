@@ -1,31 +1,27 @@
 import React from 'react'
-import PostCard from  './PostCard'
+import PostCard from './PostCard'
 
-function PostsList({myPosts}) {
+function PostsList({ myPosts }) {
     console.log(myPosts)
     return (
         <>
-          
+
             <div className="div">
-                
-
-                    {myPosts.map(post => (
-
-                        <PostCard 
-                            title={post.title}
-                            id={post.id}
-                           
-                        />
 
 
-                    ))}
+                {myPosts.map(post => (
 
-            {/*         {
-                myPosts.map((post)=>{
-                    return <li key={post.id}>{post.title}</li>
-                })
-            } */}
-                
+                    <PostCard
+                        title={post.title}
+                        id={post.id}
+                        key={post.id}
+
+                    />
+
+
+                ))}
+
+
             </div>
         </>
     )
