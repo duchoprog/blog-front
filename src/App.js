@@ -5,12 +5,13 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import EditPost from './components/EditPost'
 import NewPost from './components/NewPost'
+import PostDetails from './components/PostDetails';
 
 
 function App() {
   return (
     <div className="App">
-    <Router>
+      <Router>
         <div className='App'>
           <Navbar />
           <div className='container'>
@@ -18,6 +19,7 @@ function App() {
               <Route exact path='/' component={Home} />
               <Route exact path='/editPost' component={EditPost} />
               <Route exact path='/newPost' component={NewPost} />
+              <Route exact path='/postDetails' component={PostDetails} />
 
             </Switch>
           </div>

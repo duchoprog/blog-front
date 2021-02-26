@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { GetAllPosts } from '../services/GetAllPosts'
-import PostsList from  './PostsList'
+import { getAllPosts } from '../services/getAllPosts'
+import PostsList from './PostsList'
 
 
 function Home() {
-    
+
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        GetAllPosts().then((res)=>{
+        getAllPosts().then((res) => {
             setPosts(res)
             console.log(posts)
-        }).catch((err)=>{
+        }).catch((err) => {
             console.log(err)
         })
-        
-       
-       
+
+
+
     }, [])
 
     return (
@@ -23,12 +23,12 @@ function Home() {
             <h1>Home</h1>
 
             <div>
-                
+
             </div>
 
 
             <ul>
-        
+
 
 
             </ul>
